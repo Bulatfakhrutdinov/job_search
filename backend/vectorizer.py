@@ -18,7 +18,7 @@ class Vectorizer:
     def transform(self, texts):
         if self.vectorizer is None:
             raise ValueError("Vectorizer is not fitted.")
-        return self.vectorizer.transform(texts).toarray()
+        return self.vectorizer.transform(texts)
 
     def save(self, path):
         joblib.dump(self.vectorizer, path)
