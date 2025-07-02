@@ -8,7 +8,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./nltk_data /root/nltk_data
+# COPY ./nltk_data /root/nltk_data
+RUN python -m nltk.downloader punkt
 
 # Копируем исходники
 COPY backend/ ./backend/
