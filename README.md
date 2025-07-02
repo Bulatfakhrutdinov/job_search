@@ -19,8 +19,9 @@ Due to GitHub restrictions, it is not possible to download the original dataset.
 - Docker
 - Docker Compose
 
+### How to launch
 
-Clone the repository:
+1. Clone the repository:
 ```
 git clone https://github.com/Bulatfakhrutdinov/job_search.git
 ```
@@ -29,9 +30,16 @@ git clone https://github.com/Bulatfakhrutdinov/job_search.git
 cd job_search
 ```
 
-Download [dataset](https://www.kaggle.com/datasets/etietopabraham/jobs-raw-data) and create a backend/job_dataset folder and put the dataset in it.
+2. Download [nltk_data](https://disk.yandex.ru/d/MVx5qCSVrmRGOw) and unzip it. (P.S. git hub doesn't support huge files)
+   
+3. Move the nltk_data folder to /job_search
 
-Now you can run the API with:
+4. Download [dataset](https://www.kaggle.com/datasets/asaniczka/upwork-job-postings-dataset-2024-50k-records) and create a /job_search/backend/job_dataset folder and put the dataset in it.
+
+5. Run docker:
 ```
 docker compose up -d
 ```
+6. Check the docker job-search-flask logs until it appears:
+   ```Initialization completed successfully!```
+8. Open http://127.0.0.1:5001/
